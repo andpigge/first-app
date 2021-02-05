@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Тело страницы -->
+<div class="body">
+
+    <!-- Шапка страницы -->
+    <div class="head">
+
+        <div class="logo">
+            <div class="logo__text">
+                <a href="#" class="logo__link">App Test</a>
+            </div>
+            <div class="logo__item">
+                <!-- Форма выбора теста для прохождения -->
+                <form name="passTest">
+                    <select name="itemTest" id="itemTest">
+                        <option disabled value="id1">Выберите тест</option>
+                    </select>
+                    <button name="buttonStartTest" id="buttonStartTest" type="submit">Пройти выбранный тест</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Контентная часть страницы -->
+    <div class="content">
+
+        <!-- История прохождения тестов -->
+        <div class="info">
+            <div class="info__titleHistory">История прохождения тестов</div>
+            <div class="info__container"></div>
+            <button class="info__button">Удалить историю тестов</button>
+
+        </div>
+
+        <!-- Создание и вывод тестов -->
+        <div class="test">
+            <!--  Создание тестов  -->
+            <div class="createTest">
+                <div class="formTest">
+                    <form action="#" name="createTest">
+
+                        <label for="testTitle" class="label">Введите название теста</label>
+
+                        <input type="text" id="testTitle" name="testTitle" class="input input_title" placeholder="Заполните название теста.">
+
+                        <label for="testDesc" class="label">Введите описание теста</label>
+
+                        <textarea name="testDesc" id="testDesc" class="input input_desc" placeholder="Опиши кратко что содержит тест. Почему его нужно пройти."></textarea>
+
+                        <button name="submitTest" type="submit" class="button formTest__button">Создать тест</button>
+
+                    </form>
+
+                </div>
+            </div>
+            <!-- Созданные тесты -->
+            <div class="createdTest">
+
+            </div>
+
+        </div>
+
+        <!-- Кнопка удалить выбранные тесты -->
+        <div class="buttonDelete">
+            <div class="buttonDelete__containerLeft"></div>
+            <div class="buttonDelete__containerRight">
+                <form name="buttonAllTest"><button type="submit" name="deleteAll" class="button button_deleteAll">Удалить выбранные тесты</button></form>
+            </div>
+        </div>
+
+        <!-- Контейнер для созданных вопросов -->
+        <div class="infoQuestion"><h2 class="infoQuestion__text">Текущие созданные вопросы</h2></div>
+
+        <!-- Контейнер с формой заполнения вопросов. Форма добавляется динамически при выборе создать вопрос -->
+        <div class="questionsTest"></div>
+
+        <!-- Контейнер для вывода и подсчета правильных ответов после прохождения теста -->
+        <div class="startTest"></div>
+
+    </div>
+</div>
+
+<!-- Подвал страницы -->
+<footer class="footer">
+    <div class="footer__body"></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
